@@ -1,0 +1,59 @@
+\item 
+\begin{enumerate}
+    \item \begin{answer}
+        \begin{align*}
+            A &= T\Lambda T^{-1} \\
+            AT &= T\Lambda \\
+            A \begin{bmatrix}
+                t^{(1)} & \cdots & t^{(n)}
+            \end{bmatrix} &= 
+            \begin{bmatrix}
+                t^{(1)} & \cdots & t^{(n)}
+            \end{bmatrix}
+            \begin{bmatrix}
+                \lambda_1 & 0 & \cdots & 0 \\
+                0 & \lambda_2 & \cdots & 0 \\
+                \vdots & \vdots & \ddots & \vdots \\
+                0 & 0 & \cdots & \lambda_n
+            \end{bmatrix} \\
+            \begin{bmatrix}
+                At^{(1)} & \cdots & At^{(n)}
+            \end{bmatrix} &= 
+            \begin{bmatrix}
+                \lambda_1 t^{(1)} & \cdots & \lambda_n t^{(n)}
+            \end{bmatrix}
+        \end{align*}
+        Therefore, we have: $At^{(i)} = \lambda_i t^{(i)}$.
+    \end{answer}
+
+    \item \begin{answer}
+        \begin{align*}
+            A &= U\Lambda U^{\top} \\
+            AU &= U\Lambda \\
+            A \begin{bmatrix}
+                u^{(1)} & \cdots & u^{(n)}
+            \end{bmatrix} &= 
+            \begin{bmatrix}
+                u^{(1)} & \cdots & u^{(n)}
+            \end{bmatrix}
+            \begin{bmatrix}
+                \lambda_1 & 0 & \cdots & 0 \\
+                0 & \lambda_2 & \cdots & 0 \\
+                \vdots & \vdots & \ddots & \vdots \\
+                0 & 0 & \cdots & \lambda_n
+            \end{bmatrix} \\
+            \begin{bmatrix}
+                Au^{(1)} & \cdots & Au^{(n)}
+            \end{bmatrix} &= 
+            \begin{bmatrix}
+                \lambda_1 u^{(1)} & \cdots & \lambda_n u^{(n)}
+            \end{bmatrix}
+        \end{align*}
+        Therefore, we have: $Au^{(i)} = \lambda_i u^{(i)}$.
+    \end{answer}
+
+    \item \begin{answer}
+        From part (b), $Au^{(i)} = \lambda_i u^{(i)}$.
+        $$(u^{(i)})^{\top}Au^{(i)} = (u^{(i)})^{\top}\lambda_i u^{(i)} = \lambda_i (u^{(i)})^{\top} u^{(i)} = \lambda_i \ge 0$$
+    \end{answer}
+\end{enumerate}

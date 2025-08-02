@@ -1,0 +1,52 @@
+\item 
+\begin{enumerate}
+    \item \begin{answer}
+        \begin{align*}
+            f(x) &= \frac{1}{2} x^{\top}Ax + b^{\top}x \\
+            &= \frac{1}{2} \sum_{i, j} A_{i, j} x_i x_j  + \sum_i b_i x_i \\
+            \frac{\partial}{\partial x_k} f(x) &= \frac{1}{2}(\sum_{i \ne k} A_{ik} x_i + \sum_{j \ne k} A_{kj} x_j + 2A_{kk} x_k) + b_k \\
+            &= \frac{1}{2}(\sum_{i \ne k} A_{ik} x_i + \sum_{j \ne k} A_{jk} x_j + 2A_{kk} x_k) + b_k \\
+            &= \sum_{i \ne k} A_{ik} x_i + A_{kk} x_k + b_k \\
+            &= \sum_i A_{ik} x_i + b_k \\
+            \nabla f(x) &= \begin{bmatrix}
+                \frac{\partial}{\partial x_1} f(x) \\
+                \vdots \\
+                \frac{\partial}{\partial x_n} f(x)
+            \end{bmatrix} \\
+            &= \begin{bmatrix}
+                \sum_i A_{i1} x_i + b_1 \\
+                \vdots \\
+                \sum_i A_{in} x_i + b_n
+            \end{bmatrix} \\
+            &= Ax + b
+        \end{align*}
+    \end{answer}
+    
+    \item \begin{answer}
+        \begin{align*}
+            \frac{\partial}{\partial x_k} f(x) &= \frac{\partial}{\partial x_k} g(h(x)) \\
+            &= \frac{\partial g(h(x))}{\partial h(x)} \frac{\partial h(x)}{\partial x_k} \\
+            &= g'(h(x)) \frac{\partial h(x)}{\partial x_k} \\
+            \nabla f(x) &= g'(h(x)) \nabla h(x)
+        \end{align*}
+    \end{answer}
+
+    \item \begin{answer}
+        \begin{align*}
+            \nabla ^2 f(x) &= \nabla(\nabla f(x)) \\
+            &= \nabla(Ax + b) \\
+            &= A
+        \end{align*}
+    \end{answer}
+
+    \item \begin{answer}
+    From part (b), let $h(x) = a^{\top}x$. We have:
+        \begin{align*}
+            \nabla f(x) &= g'(a^{\top}x) \nabla h(x) \\
+            &= g'(a^{\top}x) a \\
+            \nabla ^2 f(x) &= \nabla(\nabla f(x)) \\
+            &= \nabla (g'(a^{\top}x) a) \\
+            &= g''(a^{\top}x) a a^{\top}
+        \end{align*}
+    \end{answer}
+\end{enumerate}

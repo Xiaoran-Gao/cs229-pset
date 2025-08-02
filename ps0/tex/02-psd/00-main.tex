@@ -1,0 +1,35 @@
+\item 
+\begin{enumerate}
+    \item \begin{answer}
+        $A^{\top} = (zz^{\top})^{\top} = zz^{\top} = A$
+        
+        $\forall x \in \mathbb{R}^n$,
+        \begin{align*}
+            x^{\top}Ax &= x^{\top}zz^{\top}x \\
+            &= (z^{\top}x)^{\top} (z^{\top}x) \\
+            &= (z^{\top}x)^2 \ge 0
+        \end{align*}
+
+        Therefore, $A$ is PSD.
+    \end{answer}
+
+    \item \begin{answer}
+        To calculate the null-space of $A$, set $Ax = zz^{\top}x = 0$ and solve for $x$, where $x \in \mathbb{R}^n$.
+        For $i=1, \cdots, n$, we have $z_i \sum_{j=1}^n z_j x_j = 0$. Since $z$ is a non-zero $n$-vector, we require $\sum_{j=1}^n z_j x_j = 0$ only.
+        Therefore, null-space of $A = \{x: x \in \mathbb{R}^n, z^{\top}x = 0 \}$.
+
+        $$\text{Rank}(A) = \text{Rank}(zz^{\top}) = 1$$
+    \end{answer}
+
+    \item \begin{answer}
+        $(BAB^{\top})^{\top} = B(BA)^{\top} = BA^{\top}B^{\top} = BAB^{\top}$
+
+        $\forall x \in \mathbb{R}^n$,
+        \begin{align*}
+            x^{\top}BAB^{\top}x &= (B^{\top}x)^{\top}A(B^{\top}x) \\
+            &\overset{y=B^{\top}x}{=} y^{\top}Ay \ge 0
+        \end{align*}
+
+        Therefore, $BAB^{\top}$ is PSD.
+    \end{answer}
+\end{enumerate}
